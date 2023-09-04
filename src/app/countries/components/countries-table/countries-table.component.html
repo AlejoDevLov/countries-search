@@ -1,0 +1,42 @@
+<div
+  *ngIf="countries.length === 0; else table"
+  class="max-w-screen-sm mx-auto">
+  <img src="/assets/undraw-world.svg" alt="world_img">
+</div>
+
+<ng-template #table>
+  <table>
+    <thead>
+      <th>#</th>
+      <th>Siglas</th>
+      <th>Bandera</th>
+      <th>Nombre</th>
+      <th>Capital</th>
+      <th>Poblacion</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries; let i = index"
+        class="hover:bg-slate-600 hover:text-white border-b">
+        <td>{{ i + 1 }}</td>
+        <td>{{ country.flag }}</td>
+        <td>
+          <img
+            [src]="country.flags.svg"
+            [alt]="country.name.common"
+            class="w-6 mx-auto">
+        </td>
+        <td>{{ country.name.common }}</td>
+        <td>{{ country.capital }}</td>
+        <td>{{ country.population | number }}</td>
+        <td>
+          <a
+            class="text-blue-400"
+            [routerLink]="['/countries/by/', country.cca3]"
+            >Ver mas
+        </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>

@@ -1,0 +1,17 @@
+<h2 class="text-3xl md:text-4xl mb-4">Por capital</h2>
+<hr>
+<div class="my-4">
+  <div>
+    <!-- searchbox -->
+    <shared-search-box
+      placeholder="Buscar por capital"
+      (inputSearch)="searchByCapital($event)"
+      [value]="term"></shared-search-box>
+  </div>
+</div>
+<div>
+  <div class="overflow-x-auto mb-16 w-[90%] mx-auto">
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
