@@ -20,9 +20,9 @@ module.exports = {
       },
 
       backgroundImage: {
-        mundo1: 'url("/assets/mundo.jpg")',
-        fondo: 'url("/assets/fondo4.jpg")',
-        "fondo-btn": 'url("/assets/fondo-btn-1.jpg")',
+        mundo1: 'url("./assets/mundo.jpg")',
+        fondo: 'url("./assets/fondo4.jpg")',
+        "fondo-btn": 'url("./assets/fondo-btn-1.jpg")',
       },
 
     },

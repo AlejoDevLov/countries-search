@@ -16,13 +16,13 @@
 
 @layer utilities {
   .fondo-body {
-    background: linear-gradient(to right, rgba(220, 217, 217, 0.466),rgba(158, 158, 158, 0.566)), url('/assets/fondo4.jpg');
+    background: linear-gradient(to right, rgba(220, 217, 217, 0.466),rgba(158, 158, 158, 0.566)), url('./assets/fondo4.jpg');
     background-size: contain;
     background-attachment: fixed;
   }
 
   .fondo-btn-2 {
-    background: linear-gradient(rgba(15, 15, 15, 0.259),rgba(0, 0, 0, 0.491)), url('/assets/fondo-btn-2.jpg');
+    background: linear-gradient(rgba(15, 15, 15, 0.259),rgba(0, 0, 0, 0.491)), url('./assets/fondo-btn-2.jpg');
     background-position: center;
   }
 }
