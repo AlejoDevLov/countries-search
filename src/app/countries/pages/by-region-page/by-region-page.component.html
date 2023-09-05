@@ -1,14 +1,15 @@
 <h2 class="text-3xl md:text-4xl mb-4">Por continente</h2>
 <hr>
 <div class="my-4">
-  <div class="gap-4 flex items-center justify-center flex-wrap mb-12">
+  <div class="gap-4 flex items-center justify-center md:justify-start flex-wrap mb-6">
     <button
       *ngFor="let region of regions"
-      class="border-2 border-slate-500 md:py-2 md:px-3 md:rounded-lg md:text-lg
-      text-base py-1 w-24 hover:text-emerald-500 hover:border-emerald-500
-      md:w-28 shrink-0 rounded-md"
+      class="border-2 md:py-2 md:px-3 md:rounded-lg md:text-lg
+      text-base py-1 w-24 hover:text-amber-950 hover:border-amber-950
+      md:w-28 shrink-0 rounded-md text-slate-800 font-extrabold hover:bg-[rgba(252,248,248,0.6)]"
       [ngClass]="{
-        'text-emerald-500 border-emerald-500': currentRegion === region,
+        'text-amber-950 border-amber-950 bg-[rgba(252,248,248,0.6)]': currentRegion === region,
+        'border-slate-800': currentRegion !== region,
       }"
       (click)="searchByRegion(region)"
     >
@@ -17,7 +18,7 @@
   </div>
 </div>
 <div>
-  <div class="overflow-x-auto mb-16 w-[90%] mx-auto">
+  <div class="overflow-x-auto md:overflow-x-visible pb-8 w-[95%] mx-auto max-h-screen overflow-y-auto">
     <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
     <countries-table [countries]="countries"></countries-table>
   </div>

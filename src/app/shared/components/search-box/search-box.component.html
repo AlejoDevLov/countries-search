@@ -2,7 +2,7 @@
   type="text"
   [placeholder]="placeholder"
   class="w-full focus:ring-blue-200 focus:ring-2 outline-none
-  p-2 rounded-sm border-2 border-slate-400"
+  p-2 rounded-sm border-2 border-slate-400 md:w-[40vw] max-w-[560px]"
   (keyup)="onKeyPress(searchInput.value)"
   (keyup.enter)="emitInputValue(searchInput.value)"
   [value]="value"

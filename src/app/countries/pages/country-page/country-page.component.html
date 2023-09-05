@@ -19,19 +19,19 @@
 
     <div class="my-12">
       <img [src]="country.flags.svg" [alt]="country.name.common"
-      class="md:w-full w-1/2 mx-auto">
+      class="md:w-full w-1/2 mx-auto drop-shadow-[0px_0px_15px_black]">
     </div>
 
     <div class="md:flex items-center md:justify-center">
       <ul class="md:w-1/2 space-y-2 text-start text-lg md:text-xl w-full">
         <li class="border-b p-2 border-black">
-          <strong>Población: </strong>{{ country.population | number }}
+          <strong class="font-bold">Población: </strong>{{ country.population | number }}
         </li>
         <li class="border-b p-2 border-black">
-          <strong>Código: </strong>{{ country.cca3 }}
+          <strong class="font-bold">Código: </strong>{{ country.cca3 }}
         </li>
         <li class="border-b p-2 border-black">
-          <strong>Capital: </strong>{{ country.capital }}
+          <strong class="font-bold">Capital: </strong>{{ country.capital }}
         </li>
       </ul>
     </div>

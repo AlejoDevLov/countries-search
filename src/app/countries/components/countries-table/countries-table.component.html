@@ -1,23 +1,24 @@
 <div
   *ngIf="countries.length === 0; else table"
-  class="max-w-screen-sm mx-auto">
-  <img src="./assets/undraw-world.svg" alt="world_img">
+  class="max-w-screen-sm mt-8 w-3/5 object-cover object-center mx-auto md:mx-0 overflow-hidden">
+  <img src="./assets/logo.png" alt="world_img" class="w-full aspect-square animate-rotateWorld
+  drop-shadow-[0px_0px_10px_gray]">
 </div>
 
 <ng-template #table>
-  <table>
-    <thead>
+  <table class="bg-[rgba(0,0,0,0.4)] text-white w-full">
+    <thead class="text-lg">
       <th>#</th>
       <th>Siglas</th>
       <th>Bandera</th>
       <th>Nombre</th>
       <th>Capital</th>
-      <th>Poblacion</th>
+      <th>Población</th>
       <th></th>
     </thead>
     <tbody>
       <tr *ngFor="let country of countries; let i = index"
-        class="hover:bg-slate-600 hover:text-white border-b">
+        class="hover:bg-slate-600 border-b">
         <td>{{ i + 1 }}</td>
         <td>{{ country.flag }}</td>
         <td>
@@ -31,9 +32,9 @@
         <td>{{ country.population | number }}</td>
         <td>
           <a
-            class="text-blue-400"
+            class="text-red-200 block w-max underline underline-offset-2"
             [routerLink]="['/countries/by/', country.cca3]"
-            >Ver mas
+            >Ver más
         </a>
         </td>
       </tr>
